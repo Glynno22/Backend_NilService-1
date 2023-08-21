@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prestataires', function (Blueprint $table) {
+        Schema::create('prestataire', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nomPrest');
-            $table->string('emailPrest');
-            $table->string('codePremiumPar');
-            $table->string('codePrest');
-            $table->string('paysPrest');
-            $table->string('villePrest');
-            $table->string('quartierPrest');
-            $table->string('categoriePrest');
-            $table->string('telPrest');
+            $table->string('nom');
+            $table->string('email');
+            $table->integer('phone');
+            $table->string('pays');
+            $table->string('ville');
+            $table->string('quartier');
+            $table->string('categorie');
+            $table->string('scanner');
+            $table->string('photo');
+            $table->string('cni');
             $table->text('description');
-            $table->string('scanCNI');
-            $table->string('photoPrest');
-            $table->string('photoAvecCNI');
+            $table->string('code');
+            $table->string('parrain');
+            $table->integer('statut');
+            $table->date('dateCreation');
             $table->timestamps();
         });
     }
