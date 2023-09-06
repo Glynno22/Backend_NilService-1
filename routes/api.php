@@ -51,7 +51,7 @@ Route::delete('supprimervendeur/{id}',[VendeursController::class,'destroy']);
 Route::put('modifierstatutvendeur/{id}',[VendeursController::class,'toggleActivation']);
 
 
-/*-------------------- les routes pour Prestataires------------------------*/
+/*-------------------- les routes pour Prestataires ------------------------*/
 
 Route::get('listeprestataire',[PrestatairesController::class,'index']);
 Route::post('ajouterprestataire',[PrestatairesController::class,'store']);
@@ -68,6 +68,3 @@ Route::put('editerclient/{id}',[ClientsController::class,'update']);
 Route::delete('supprimerclient/{id}',[ClientsController::class,'destroy']);
 Route::put('modifierstatutclient/{id}',[ClientsController::class,'toggleActivation']);
 Route::get('rechercheclient/{id}',[ClientsController::class,'show']);
-
-
-
